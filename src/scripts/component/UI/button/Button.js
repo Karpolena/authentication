@@ -17,3 +17,7 @@ button.propTypes = {
 }
 
 export default button;
+
+button.propTypes = {
+    disabled: PropTypes.bool
+}

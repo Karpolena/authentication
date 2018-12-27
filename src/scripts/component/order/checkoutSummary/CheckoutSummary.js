@@ -2,6 +2,7 @@ import React from "react";
 
 import Burger from "../../Burger/Burger";
 import Button from "../../UI/button/Button";
+import PropTypes from "prop-types";
 
 const checkoutSummary  = (props) => {
     return (
@@ -21,3 +22,9 @@ const checkoutSummary  = (props) => {
 } 
 
 export default checkoutSummary;
+
+checkoutSummary.propTypes = {
+    ingredients: PropTypes.array,
+    checkoutCancelled: PropTypes.func,
+    checkoutContinued: PropTypes.func
+}

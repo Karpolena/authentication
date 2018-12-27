@@ -21,3 +21,7 @@ navigationItem.propTypes = {
 }
 
 export default navigationItem;
+
+navigationItem.propTypes = {
+    exact: PropTypes.bool
+}

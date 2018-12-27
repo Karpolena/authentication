@@ -6,7 +6,7 @@ import axios from "../../../axios-orders";
 import withErrorHandler from "../../../hoc/withErrorHandler/withErrorHandler";
 import * as actions from "../../../store/actions/index";
 import Spinner from "../../../component/UI/spinner/Spinner";
-
+import PropTypes from "prop-types";
 
 class Orders extends Component {
    
@@ -48,3 +48,9 @@ const mapDispatchToProps = dispatch => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(Orders, axios));
+
+Orders.propTypes = {
+    orders: PropTypes.array,
+    loading: PropTypes.bool,
+    onFetchOrders: PropTypes.func    
+}

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";  
+import PropTypes from "prop-types";
 
 
 import Aux from "../../hoc/Auxx";
@@ -79,7 +80,7 @@ class BurgerBuilder extends Component {
         let orderSummary = null;
         
         
-        let burger = this.props.error ? <p>ingredients can't be loaded!</p> : <Spinner />;
+        let burger = this.props.error ? <p>ingredients can not be loaded!</p> : <Spinner />;
         if (this.props.ings) {
             burger = (
                 <Aux>
@@ -133,3 +134,14 @@ const mapDispatchToProps = dispatch => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(BurgerBuilder, axios));
+
+BurgerBuilder.propTypes = {
+    onIngredientAdded: PropTypes.func,
+    onIngredientRemoved: PropTypes.func,
+    onInitIngredients: PropTypes.func,
+    onInitPurchase: PropTypes.func,
+    history: PropTypes.object,
+    ings: PropTypes.array,
+    price: PropTypes.number,
+    error: PropTypes.object
+}

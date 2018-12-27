@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const order = (props) => {
     const ingredients = [];
@@ -30,3 +31,8 @@ const order = (props) => {
 };
 
 export default order;
+
+order.propTypes = {
+    ingredients: PropTypes.object,
+    price: PropTypes.number
+}

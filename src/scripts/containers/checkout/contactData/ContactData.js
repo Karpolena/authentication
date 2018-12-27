@@ -7,6 +7,7 @@ import Spinner from "../../../component/UI/spinner/Spinner";
 import Input from "../../../component/UI/input/Input";
 import withErrorHandler from "../../../hoc/withErrorHandler/withErrorHandler";
 import * as actions from "../../../store/actions/index";
+import PropTypes from "prop-types";
 
 class ContactData extends Component {
     state = {
@@ -195,3 +196,10 @@ const mapDispatchToProps = dispatch => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps )(withErrorHandler(ContactData, axios));
+
+ContactData.propTypes = {
+    ings: PropTypes.object,
+    price: PropTypes.number,
+    loading: PropTypes.bool,
+    onOrderBurger: PropTypes.func
+}

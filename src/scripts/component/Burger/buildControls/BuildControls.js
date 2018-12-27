@@ -32,8 +32,15 @@ const buildControls = (props) => (
     </div>
 )
 
-buildControls.propTypes = {
-  
-} 
+ 
 
 export default buildControls;
+
+buildControls.propTypes = {
+    price: PropTypes.number,
+    ingredientAdded: PropTypes.func,
+    ingredientRemoved: PropTypes.func,
+    disabled: PropTypes.bool,
+    purchasable: PropTypes.bool,
+    ordered: PropTypes.bool
+}

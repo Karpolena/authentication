@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 import CheckoutSummary from "../../component/order/checkoutSummary/CheckoutSummary";
 import ContactData from "./contactData/ContactData";
-// import * as actions from "../../store/actions/index";
+import PropTypes from "prop-types";
 
 class Checkout extends Component {
    
@@ -68,3 +68,11 @@ const mapStateToProps = state => {
 
 
 export default connect(mapStateToProps )(Checkout);
+
+Checkout.propTypes = {
+    ings: PropTypes.object,
+    purchased: PropTypes.bool,
+    history: PropTypes.object,
+    match: PropTypes.object,
+    
+}

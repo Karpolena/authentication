@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Input from "../../component/UI/input/Input";
 import Button from "../../component/UI/button/Button";
 
+
 class Auth extends Component {
     state = {
         controls: {
@@ -94,7 +95,7 @@ class Auth extends Component {
             />
         ))
         return (
-            <div className="Auth">
+            <div className="ContactData">
                 <form>
                     {form}
                     <Button btnType="Success">SUBMIT</Button>
